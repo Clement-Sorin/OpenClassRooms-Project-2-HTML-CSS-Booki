@@ -63,6 +63,7 @@ p {
 header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     height: 79px;
 }
 
@@ -157,8 +158,10 @@ nav {
     font-weight: 700;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     height: 50px;
+
 }
 
 #cont-filtres {
@@ -231,6 +234,7 @@ nav {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .hebergements-and-populaires section {
@@ -252,6 +256,7 @@ nav {
 .heb-layer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .link-card-heb {
@@ -354,6 +359,22 @@ nav {
     padding: 20px 19px;
 }
 
+/****** Activités ***********/
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 50px;
+    background-color: var(--main-bg-color);
+}
+
+.div-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 30%;
+    padding: 20px;
+}
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
