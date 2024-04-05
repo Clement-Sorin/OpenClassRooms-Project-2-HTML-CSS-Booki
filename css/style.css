@@ -22,6 +22,7 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
+    min-width: 380px;
     padding: 0 50px;
     box-sizing: border-box;
 }
@@ -40,6 +41,7 @@ a {
 
 ul {
     list-style: none;
+    padding-left: 0;
 }
 
 h1, h2 {
@@ -63,15 +65,10 @@ p {
 header{
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     height: 79px;
 }
 
-#logo-header {
-  width: 30%; 
-}
-
-#logo-header img {
+.logo-header{
     padding: 30px 50px ;
     width: 20%;
 }
@@ -100,24 +97,25 @@ nav {
 
 /****** Info Group ***********/
 
-#info-group {
+.info-group {
     display: flex;
     flex-direction: column;
     gap: 35px;
 }
 
-#headline h1{
+.headline h1{
     margin-bottom: 8px;
 }
 
-#search-bar {
+.search-bar {
     display: flex;
     align-items: center;
     height: 49px;
 }
 
-#search-icon {
+.search-pt1 {
     background-color: var(--main-bg-color);
+    border: solid 1px var(--main-bg-color);
     border-radius: 15px 0 0 15px ;
     width: 50px;
     height: 100%;
@@ -131,40 +129,51 @@ nav {
     color: black;
 }
 
-#form-search {
+.form-search {
     border: solid 1px var(--main-bg-color);
     border-radius: 0 15px 15px 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-#input-search {
+.input-search {
     text-align: center;
-    height: 100%;
     border: none;
     font-size: 1.1rem;
     font-weight: 700;
 }
 
-#btn-rechercher {
-    border: solid 1px var(--main-color);
+.btn-rechercher {
+    border: none;
     border-radius: 0 15px 15px 0;
     background-color: var(--main-color);
     color: white ;
     font-size: 1.1rem;
     font-weight: 700;
     padding: 15px 16px;
+    display: block;
 }
 
-#filter-bar {
+.fa-magnifying-glass {
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px 16px;
+    border-radius: 15px;
+    border: solid 2px var(--main-color);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: none;
+}
+
+.filter-bar {
     font-weight: 700;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 15px;
-    height: 50px;
-
+    height: auto;
 }
 
-#cont-filtres {
+.cont-filtres {
     display: flex;
     gap: 15px;
 }
@@ -185,13 +194,13 @@ nav {
     background-color: var(--filter-bg-color);
 }
 
-#info-bar {
+.info-bar {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-#div-icon-info {
+.div-icon-info {
     width: 24px;
     height: 24px;
     border: solid 1px var(--main-bg-color);
@@ -219,7 +228,7 @@ nav {
 }
 
 .card-title {
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .euro {
@@ -278,7 +287,7 @@ nav {
     padding: 8px 0;
 }
 
-#afficher-plus a {
+.afficher-plus a {
     font-weight: 700;
 }
 
@@ -333,20 +342,24 @@ nav {
 
 /****** Activités ***********/
 
-#activites {
+.activites {
     padding: 30px;
     width: auto;
 }
 
-#activ-layer {
+.activ-layer {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     padding-top: 30px;
 }
 
 .link-card-activ {
-    width: 24%;
+    width: 23%;
+    height: 438px;
+}
+
+.link-card-activ .card {
+    padding: 0;
 }
 
 .img-activites {
@@ -355,15 +368,14 @@ nav {
     border-radius: 20px 20px 0 0 ;
 }
 
-#title-activites {
+.activite-title {
     padding: 20px 19px;
 }
 
-/****** Activités ***********/
+/****** Footer ***********/
 
 footer {
     display: flex;
-    flex-wrap: wrap;
     margin: 0 50px;
     background-color: var(--main-bg-color);
 }
@@ -381,6 +393,12 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    
+    .filter-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -405,15 +423,71 @@ footer {
     }
 
     .populaires-cards .card-title {
-        font-size: 14px;
+        font-size: 1rem;
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 13px;
+        font-size: 0.9rem;
+    }
+
+    .link-card-activ {
+        height: auto;
+    }
+
+    .img-activites {
+        height: 200px;
+    }
+
+    .activites-card {
+        height: 270px;
+    }
+
+    .activite-title {
+        padding-left: 20px;
+        padding-top: 10px;
     }
 }
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    
+    .main-container {
+        padding: 0;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .div-logo-header {
+        display: flex;
+        justify-content: center;
+        height: 79px;
+    }
+
+    .logo-header {
+        padding: 30px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    nav {
+        width: 100%;
+        height: 36px;
+    }
+
+    .a-nav {
+        display: block;
+        width: 50%;
+        text-align: center;
+    }
+
+    .a-nav:hover{
+        border-top: none;
+        border-bottom: solid 2px var(--main-color);
+        color: var(--main-color);
+        margin-bottom: -4px;
+    }
+
 }
