@@ -37,6 +37,7 @@ main {
 a {
     color: inherit;
     text-decoration: none;
+    font-size: 16px;
 }
 
 ul {
@@ -45,19 +46,15 @@ ul {
 }
 
 h1, h2 {
-    font-size: 1.3rem;
+    font-size: 22px;
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 18px;
 }
 
 p {
-    font-size: 1rem;
-}
-
-.font-17 {
-    font-size: 1.05rem;
+    font-size: 16px;
 }
 
 /****** Header ***********/
@@ -78,6 +75,7 @@ nav {
     justify-content: space-evenly;
     align-items: center;
     width: 25%;
+    gap: 68px;
 }
 
 .a-nav{
@@ -111,6 +109,8 @@ nav {
     display: flex;
     align-items: center;
     height: 49px;
+    width: fit-content;
+    max-width: 377px;
 }
 
 .search-pt1 {
@@ -140,8 +140,9 @@ nav {
 .input-search {
     text-align: center;
     border: none;
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 700;
+    width: 80%;
 }
 
 .btn-rechercher {
@@ -149,7 +150,7 @@ nav {
     border-radius: 0 15px 15px 0;
     background-color: var(--main-color);
     color: white ;
-    font-size: 1.1rem;
+    font-size: 17px;
     font-weight: 700;
     padding: 15px 16px;
     display: block;
@@ -176,6 +177,7 @@ nav {
 .cont-filtres {
     display: flex;
     gap: 15px;
+    width: 100%;
 }
 
 .filtre {
@@ -184,10 +186,17 @@ nav {
     border-radius: 25px;
     padding: 4px 19px;
     cursor: pointer;
+    height: 50px;
 }
 
-.filtre span {
+.filtre i {
+    font-size: 20px;
+}
+
+.span-filtres {
     padding-left: 10px;
+    font-size: 17px;
+    font-weight: 700;
 }
 
 .filtre:hover {
@@ -228,7 +237,8 @@ nav {
 }
 
 .card-title {
-    font-size: 1rem;
+    font-size: 16px;
+    margin-top: 8px;
 }
 
 .euro {
@@ -265,12 +275,17 @@ nav {
 .heb-layer {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .link-card-heb {
     width: 31%;
     height: 207px;
+}
+
+.link-card-heb .card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 }
 
 .link-card-heb .card img {
@@ -336,6 +351,10 @@ nav {
     margin: 0;
 }
 
+.card-subtitle {
+    font-size: 14px;
+}
+
 .populaires-cards .card-rating {
     margin-bottom: 5px;
 }
@@ -393,10 +412,14 @@ footer {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
-    
+   
     .filter-bar {
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .cont-filtres {
+        gap: 10px;
     }
 
     .hebergements-and-populaires {
@@ -423,11 +446,11 @@ footer {
     }
 
     .populaires-cards .card-title {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .populaires-cards .card-subtitle {
-        font-size: 0.9rem;
+        font-size: 14px;
     }
 
     .link-card-activ {
@@ -452,7 +475,12 @@ footer {
 @media (max-width: 767.98px) {
     
     .main-container {
+        padding: 0 20px;
+    }
+    
+    main {
         padding: 0;
+        margin-top: 35px;
     }
 
     header {
@@ -475,6 +503,7 @@ footer {
     nav {
         width: 100%;
         height: 36px;
+        gap: 0px;
     }
 
     .a-nav {
@@ -487,7 +516,32 @@ footer {
         border-top: none;
         border-bottom: solid 2px var(--main-color);
         color: var(--main-color);
-        margin-bottom: -4px;
+        margin-top: 4px;
+    }
+
+    .search-bar {
+        max-width: 335px;
+        align-self: center;
+    }
+
+    .btn-rechercher {
+        display: none;
+    }
+
+    .fa-magnifying-glass {
+        display: block;
+    }
+
+    .cont-filtres {
+        flex-wrap: wrap;
+    }
+
+    .filtre {
+        width: 48.5%;
+    }
+
+    .span-filtres {
+        font-size: 14px;
     }
 
 }
