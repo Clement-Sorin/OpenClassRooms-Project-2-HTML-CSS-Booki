@@ -143,6 +143,7 @@ nav {
     font-size: 17px;
     font-weight: 700;
     width: 80%;
+    height: 90%;
 }
 
 .btn-rechercher {
@@ -154,6 +155,7 @@ nav {
     font-weight: 700;
     padding: 15px 16px;
     display: block;
+    cursor: pointer;
 }
 
 .fa-magnifying-glass {
@@ -164,6 +166,7 @@ nav {
     border: solid 2px var(--main-color);
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     display: none;
+    cursor: pointer;
 }
 
 .filter-bar {
@@ -285,7 +288,6 @@ nav {
 .link-card-heb .card {
     display: flex;
     flex-direction: column;
-    flex: 1 1 auto;
 }
 
 .link-card-heb .card img {
@@ -304,6 +306,7 @@ nav {
 
 .afficher-plus a {
     font-weight: 700;
+    font-size: 18px;
 }
 
 /****** Populaires ***********/
@@ -395,7 +398,7 @@ nav {
 
 footer {
     display: flex;
-    margin: 0 50px;
+    margin-top: 50px;
     background-color: var(--main-bg-color);
 }
 
@@ -473,9 +476,9 @@ footer {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    
+
     .main-container {
-        padding: 0 20px;
+        padding: 0;
     }
     
     main {
@@ -519,6 +522,10 @@ footer {
         margin-top: 4px;
     }
 
+    .info-group {
+        padding: 0 20px;
+    }
+
     .search-bar {
         max-width: 335px;
         align-self: center;
@@ -542,6 +549,76 @@ footer {
 
     .span-filtres {
         font-size: 14px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+        padding: 30px 20px;
+    }
+
+    .populaires {
+        margin-top: 0;
+    }
+
+    .populaires-title{
+        margin-bottom: 15px;
+    }
+
+    .populaires-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .populaires-cards .card {
+        margin-top: 0;
+    }
+
+    .populaires-cards a , .link-card-heb{
+        width: 100%;
+    }
+    
+    .populaires-cards .card-content {
+        padding: 10px 5px 5px 15px;
+        gap: 24px;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        background-color: white;
+    }
+
+    .hebergements {
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .heb-layer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activ-layer {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .link-card-activ {
+        width: 100%;
+    }
+
+    footer {
+        margin: 0;
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px;
+    }
+
+    .div-footer {
+        width: max-content;
+        padding: 0;
     }
 
 }
